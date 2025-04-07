@@ -1,0 +1,1 @@
+This folder contains src code to the MNIST Digit Recognition.
