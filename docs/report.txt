@@ -1,0 +1,55 @@
+Project Report: MNIST Digit Recognition 
+
+1. Introduction
+Handwritten digit recognition is a classic problem in the realm of computer vision and machine learning. It involves identifying handwritten digits from images, typically ranging from 0 to 9. The MNIST dataset is widely used as a benchmark for developing and evaluating digit recognition algorithms. In this project, we aim to create a web application using Streamlit that utilizes a neural network model trained on the MNIST dataset to recognize handwritten digits.
+
+2. Methodology
+
+2.1. Dataset Preparation
+The MNIST dataset consists of 60,000 training images and 10,000 test images, each of size 28x28 pixels. The dataset is split into training and test sets, and the images are preprocessed as follows:
+
+Reshape: The images are reshaped from 28x28 matrices into 1D arrays of length 784.
+Normalization: Pixel values are normalized to the range [0, 1] by dividing by 255.
+
+2.2. Neural Network Architecture
+We design a simple neural network architecture using TensorFlow and Keras:
+
+Input Layer: 784 neurons (corresponding to the flattened input image)
+Hidden Layer: Dense layer with 512 neurons and ReLU activation function
+Output Layer: Dense layer with 10 neurons (one for each digit) and softmax activation function
+This architecture is chosen for its simplicity and effectiveness in handling digit recognition tasks.
+
+2.3. Model Training
+The model is trained on the training dataset using the following configurations:
+
+Optimizer: RMSprop
+Loss Function: Categorical Cross-Entropy
+Number of Epochs: 5
+Batch Size: 128
+During training, we monitor the following metrics:
+
+Training Accuracy
+Training Loss
+
+2.4. Streamlit Web Application
+We leverage Streamlit to build an interactive web application for digit recognition:
+
+Users can upload images containing handwritten digits.
+The uploaded images are preprocessed and fed into the trained neural network model for prediction.
+Predicted digits along with confidence scores are displayed to the users.
+Users have the option to toggle between viewing training metrics (accuracy and loss) and prediction results.
+
+3. Results
+The neural network model achieves a final training accuracy of approximately 98.6% and a final training loss of approximately 0.051.
+The web application successfully recognizes handwritten digits uploaded by users with high accuracy and provides confidence scores for the predictions.
+
+4. Conclusion
+In conclusion, we have demonstrated the successful implementation of a digit recognition system using a simple neural network architecture trained on the MNIST dataset. The web application developed with Streamlit provides an intuitive interface for users to interactively upload and recognize handwritten digits. This project underscores the effectiveness of deep learning techniques in solving image classification tasks and highlights the potential of Streamlit for deploying machine learning models in user-friendly applications.
+
+5. Future Directions
+Future enhancements to this project could include:
+
+Experimenting with more complex neural network architectures to potentially improve recognition performance.
+Incorporating data augmentation techniques to enhance model generalization.
+Extending the application to support real-time digit recognition from live camera feeds.
+Implementing user authentication and storage features for maintaining user preferences and history.

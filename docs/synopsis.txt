@@ -1,0 +1,30 @@
+Title: MNIST Digit Recognition
+
+Synopsis:
+This project aims to create a web application for recognizing handwritten digits using a neural network model trained on the MNIST dataset. The project utilizes several key components:
+
+1. Neural Network Model:
+
+A simple neural network model is constructed using TensorFlow and Keras. It consists of two dense layers: one with 512 neurons and ReLU activation function, and the other with 10 neurons (output layer) and softmax activation function for multi-class classification.
+
+2. Dataset Preparation:
+
+The MNIST dataset, containing 60,000 training images and 10,000 test images of handwritten digits from 0 to 9, is loaded and prepared. The images are reshaped and normalized to fit the model input.
+
+3. Training:
+
+The model is trained on the training dataset using the RMSprop optimizer and categorical cross-entropy loss function. The training process involves 5 epochs with a batch size of 128. Training metrics such as accuracy and loss are monitored.
+
+4. Streamlit Web Application:
+
+Streamlit is used to create the user interface for the digit recognition application.
+Users can upload an image containing a handwritten digit.
+The uploaded image is preprocessed to fit the model input format.
+The model predicts the digit in the uploaded image and displays the prediction along with the confidence score.
+Additionally, users can toggle between viewing training metrics (accuracy and loss) plotted over epochs to assess the model's performance during training.
+
+5. User Interface:
+
+The application interface consists of a title, a sidebar displaying model information and training metrics, and the main content area where users can upload images and view predictions.
+
+Overall, this project demonstrates the end-to-end process of building a digit recognition system using deep learning techniques and deploying it as a user-friendly web application with Streamlit.
