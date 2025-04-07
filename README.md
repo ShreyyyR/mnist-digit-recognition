@@ -13,7 +13,7 @@ This project is a web application that recognizes handwritten digits using a tra
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/mnist-digit-recognition.git
+   git clone 
    cd mnist-digit-recognition
    ```
 
