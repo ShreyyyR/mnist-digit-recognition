@@ -1,0 +1,59 @@
+                      +------------------+
+                      |    MNIST Dataset |
+                      +--------+---------+
+                               |
+                               v
+                       +-------+------------+
+                       | Data Preprocessing |
+                       +-------+------------+
+                               |
+                               v
+                   +-----------+------------+
+                   |   Neural Network Model |
+                   +-----------+------------+
+                               |
+                               v
+                       +-------+--------+
+                       | Model Training |
+                       +-------+--------+
+                               |
+                               v
+                +--------------+--------------+
+                |   Streamlit Web Application |
+                +--------------+--------------+
+                               |
+                               v
+                     +---------+---------+
+                     | User Interaction  |
+                     +---------+---------+
+                               |
+                               v
+                     +---------+---------+
+                     |   Prediction      |
+                     +---------+---------+
+                               |
+                               v
+                     +---------+---------+
+                     |   Display Result  |
+                     +-------------------+
+
+
+In this architecture diagram:
+
+MNIST Dataset: The project starts with the MNIST dataset, which contains handwritten digit images.
+
+Data Preprocessing: The dataset undergoes preprocessing, which includes reshaping and normalization of the images to prepare them for training.
+
+Neural Network Model: A neural network model is designed, comprising input, hidden, and output layers. This model is responsible for learning the patterns in the digit images.
+
+Model Training: The model is trained using the preprocessed MNIST dataset to learn the relationships between the input images and their corresponding labels.
+
+Streamlit Web Application: Streamlit is used to create an interactive web application. Users interact with the application through the user interface.
+
+User Interaction: Users can upload images containing handwritten digits through the application interface.
+
+Prediction: The uploaded images are fed into the trained neural network model for prediction.
+
+Display Result: The application displays the predicted digit along with the confidence score to the users.
+
+This architecture illustrates the flow of data and processes in the MNIST Digit Recognition project, from dataset preparation and model training to user interaction and result display in the web application.

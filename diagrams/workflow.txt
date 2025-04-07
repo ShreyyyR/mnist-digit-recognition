@@ -1,0 +1,66 @@
+
+             +---------------------+
+             |      Start          |
+             +----------+----------+
+                        |
+                        v
+                +-------+--------+
+                |  User Uploads  |
+                |  Image         |
+                +-------+--------+
+                        |
+                        v
+             +------+---------+    No
+             | Is Image Valid? |<----------+
+             +------+---------+             |
+                        |                   |
+                        v                   |
+             +------+---------+             |
+             |  Preprocess    |             |
+             |  Image         |             |
+             +------+---------+             |
+                        |                   |
+                        v                   |
+             +------+---------+             |
+             |  Predict       |             |
+             |  Digit         |             |
+             +------+---------+             |
+                        |                   |
+                        v                   |
+             +------+---------+             |
+             | Display Result |             |
+             | (Digit and     |             |
+             | Confidence)    |             |
+             +------+---------+             |
+                        |                   |
+                        v                   |
+            +-------+--------+              |
+            |    Continue    |--------------+
+            |    Workflow    |
+            +-------+--------+
+                    |
+                    v
+             +------|------+
+             |    End      |
+             +-------------+
+
+
+In this workflow diagram:
+
+Start: The workflow begins.
+
+User Uploads Image: The user uploads an image containing a handwritten digit through the web application interface.
+
+Is Image Valid?: The system checks if the uploaded image is valid (e.g., image format, size). If the image is not valid, the workflow ends. If valid, the workflow continues to the next step.
+
+Preprocess Image: The uploaded image is preprocessed, which involves resizing, converting to grayscale, and normalization.
+
+Predict Digit: The preprocessed image is fed into the trained neural network model for prediction. The model predicts the digit in the image.
+
+Display Result: The predicted digit along with the confidence score is displayed to the user through the web application interface.
+
+Continue Workflow: After displaying the result, the workflow continues, allowing the user to upload another image or end the process.
+
+End: The workflow ends.
+
+This workflow diagram illustrates the step-by-step process of digit recognition, from user input to result display, in the MNIST Digit Recognition project.

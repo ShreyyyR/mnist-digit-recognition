@@ -1,0 +1,62 @@
++------------------------------------+
+|            MNIST Dataset           |
++------------------------------------+
+| - train_images: numpy.ndarray      |
+| - train_labels: numpy.ndarray      |
+| - test_images: numpy.ndarray       |
+| - test_labels: numpy.ndarray       |
++------------------------------------+
+| + load_data()                      |
+| + preprocess_images(images)        |
+| + preprocess_labels(labels)        |
++------------------------------------+
+                |
+                | composition
+                |
+                v
++------------------------------------+
+|           Neural Network           |
+|              Model                 |
++------------------------------------+
+| - network: Sequential              |
+| - history: History                 |
++------------------------------------+
+| + build_model()                    |
+| + compile_model()                  |
+| + train_model(train_data,          |
+|               train_labels,        |
+|               epochs,              |
+|               batch_size,          |
+|               validation_data)     |
+| + predict_digit(image)             |
++------------------------------------+
+                |
+                | association
+                |
+                v
++------------------------------------+
+|         Streamlit Application      |
++------------------------------------+
+| - uploaded_file: UploadedFile      |
+| - img: PIL.Image                   |
+| - prediction: numpy.ndarray        |
++------------------------------------+
+| + main()                           |
+| + process_image(image)             |
+| + display_prediction()             |
++------------------------------------+
+
+
+In this UML diagram:
+
+MNIST Dataset: Represents the dataset containing images and labels for training and testing. It provides methods for loading and preprocessing the data.
+
+Neural Network Model: Represents the neural network model used for digit recognition. It includes methods for building, compiling, training, and predicting digits.
+
+Streamlit Application: Represents the web application built using Streamlit for user interaction. It includes methods for processing uploaded images and displaying predictions.
+
+The relationships between classes are represented as follows:
+
+The MNIST Dataset class is composed of the Neural Network Model class, as the dataset is an integral part of the model.
+The Neural Network Model class has an association with the Streamlit Application class, indicating that the model is used within the application for prediction.
+This UML diagram provides a visual representation of the classes and their relationships in the MNIST Digit Recognition project, aiding in understanding the structure and interactions within the system.
