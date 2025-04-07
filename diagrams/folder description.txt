@@ -1,0 +1,1 @@
+This folder contains diagrams to the MNIST Digit Recognition.
